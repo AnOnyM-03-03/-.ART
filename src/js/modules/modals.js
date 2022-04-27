@@ -79,10 +79,11 @@ export const modals = () => {
                display = 'block';
             }
          });
-        //  если модальных окон открытых нет, то показываем временное окно
+         //  если модальных окон открытых нет, то показываем временное окно
          if (!display) {
             document.querySelector(selector).style.display = 'block';
             document.body.style.overflow = 'hidden';
+            const scroll = calcScroll();
             document.body.style.marginRight = `${scroll}px`;
          }
       }, time);
