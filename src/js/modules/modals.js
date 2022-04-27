@@ -1,4 +1,6 @@
 export const modals = () => {
+   // переменная для проверки клика на модальные окна
+   let btnPressed = false;
    // функция с параметрами для popup
    // добавили closeClickOverlay-для отмены клика на подложку
    function bindModals({
@@ -30,6 +32,8 @@ export const modals = () => {
             if (destroy) {
                item.remove();
             }
+            // если btnPressed = true - значит модалка была вызвана
+            btnPressed = true;
 
             windows.forEach((window) => {
                window.style.display = 'none';
@@ -107,6 +111,28 @@ export const modals = () => {
       return scrollWidth;
    }
 
+   function openByScroll(selector) {
+      window.addEventListener('scroll', () => {
+         //   переменная для приведения совместимости
+         const scrollHeight = Math.max(
+            document.documentElement.clientHeight,
+            document.body.scrollHeight
+         );
+         //   если пользователь не нажал кнопку и долистал до конца
+         // window.scrollY - сколько пользователь пролистал от начала
+         // document.documentElement.clientHeight - сколько пользователь видит на данный момент
+         // document.documentElement.scrollHeight - полная высота документа
+         if (
+            !btnPressed &&
+            window.scrollY + document.documentElement.clientHeight >=
+               scrollHeight
+         ) {
+            // .click()-ручное использование событий, мы как будто кликнули на элемент
+            document.querySelector(selector).click();
+         }
+      });
+   }
+
    const designModalWindow = {
       triggerSelector: '.button-design',
       modalSelector: '.popup-design',
@@ -127,5 +153,6 @@ export const modals = () => {
    bindModals(designModalWindow);
    bindModals(consultationModalWindow);
    bindModals(giftModalWindow);
+   openByScroll('.fixed-gift');
    showModal('.popup-consultation', 2000);
 };
