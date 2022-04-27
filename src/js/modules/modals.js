@@ -5,7 +5,8 @@ export const modals = () => {
       triggerSelector,
       modalSelector,
       closeSelector,
-      closeClickOverlay = true,
+      //   параметр для удаления элемента
+      destroy = false,
    }) {
       const triggers = document.querySelectorAll(triggerSelector);
       const modal = document.querySelector(modalSelector);
@@ -24,6 +25,10 @@ export const modals = () => {
             if (e.target) {
                // отключение стандартного поведения в данном случае ссылки
                e.preventDefault();
+            }
+            // если destroy будет true, то-есть нажат, то он удалится
+            if (destroy) {
+               item.remove();
             }
 
             windows.forEach((window) => {
@@ -47,7 +52,7 @@ export const modals = () => {
       });
       // событие для окна
       modal.addEventListener('click', (e) => {
-         if (e.target === modal && closeClickOverlay) {
+         if (e.target === modal) {
             windows.forEach((window) => {
                window.style.display = 'none';
             });
@@ -70,12 +75,12 @@ export const modals = () => {
    // функция с временным окном которое показываеться через 60 сек или не показывается вовсе
    function showModal(selector, time) {
       setTimeout(function () {
-         const display = '';
+         let display;
          //  выбираем все модальные окна с дата атрибутом и перебираем их
-         document.querySelectorAll('[data-modal]').forEach((window) => {
+         document.querySelectorAll('[data-modal]').forEach((modaWindow) => {
             // если у пользователя открыто модальное окно
             // getComputedStyle - показывает стили которые вешает браузер
-            if (getComputedStyle(window).display !== 'none') {
+            if (getComputedStyle(modaWindow).display !== 'none') {
                display = 'block';
             }
          });
@@ -112,8 +117,15 @@ export const modals = () => {
       modalSelector: '.popup-consultation',
       closeSelector: '.popup-consultation .popup-close',
    };
+   const giftModalWindow = {
+      triggerSelector: '.fixed-gift',
+      modalSelector: '.popup-gift',
+      closeSelector: '.popup-gift .popup-close',
+      destroy: true,
+   };
 
    bindModals(designModalWindow);
    bindModals(consultationModalWindow);
+   bindModals(giftModalWindow);
    showModal('.popup-consultation', 2000);
 };
