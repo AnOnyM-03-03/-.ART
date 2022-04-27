@@ -37,6 +37,7 @@ export const modals = () => {
 
             windows.forEach((window) => {
                window.style.display = 'none';
+               window.classList.add('animated', 'fadeIn');
             });
             // добавляем дисплей блок для окна
             modal.style.display = 'block';
@@ -50,7 +51,6 @@ export const modals = () => {
          windows.forEach((window) => {
             window.style.display = 'none';
          });
-
          closeModal();
          document.body.style.marginRight = `0px`;
       });
