@@ -2,7 +2,6 @@ export const modals = () => {
    // переменная для проверки клика на модальные окна
    let btnPressed = false;
    // функция с параметрами для popup
-   // добавили closeClickOverlay-для отмены клика на подложку
    function bindModals({
       triggerSelector,
       modalSelector,
@@ -24,6 +23,7 @@ export const modals = () => {
       // событие клика и показа окна
       triggers.forEach((item) => {
          item.addEventListener('click', (e) => {
+
             if (e.target) {
                // отключение стандартного поведения в данном случае ссылки
                e.preventDefault();
@@ -51,11 +51,13 @@ export const modals = () => {
          windows.forEach((window) => {
             window.style.display = 'none';
          });
+
          closeModal();
          document.body.style.marginRight = `0px`;
       });
       // событие для окна
       modal.addEventListener('click', (e) => {
+
          if (e.target === modal) {
             windows.forEach((window) => {
                window.style.display = 'none';
@@ -68,6 +70,7 @@ export const modals = () => {
 
       //   скрытие окна при нажатии клавиши Escape
       window.addEventListener('keydown', (e) => {
+          
          if (e.key === 'Escape') {
             document.body.style.marginRight = `0px`;
 
@@ -125,7 +128,7 @@ export const modals = () => {
          if (
             !btnPressed &&
             window.scrollY + document.documentElement.clientHeight >=
-               scrollHeight
+            scrollHeight
          ) {
             // .click()-ручное использование событий, мы как будто кликнули на элемент
             document.querySelector(selector).click();
@@ -154,5 +157,5 @@ export const modals = () => {
    bindModals(consultationModalWindow);
    bindModals(giftModalWindow);
    openByScroll('.fixed-gift');
-   showModal('.popup-consultation', 2000);
+   showModal('.popup-consultation', 6000);
 };

@@ -24,7 +24,6 @@ export const slider = ({ slides, dir, prev, next }) => {
 
    //    функция для смены слайдов
    function plusSlides(num) {
-
       showSlides((slideIndex += num));
    }
    // если селекторы кнопок не были переданы, то блок не выполнится и не сломает весь код
@@ -33,14 +32,12 @@ export const slider = ({ slides, dir, prev, next }) => {
          nextBtn = document.querySelector(next);
 
       prevBtn.addEventListener('click', () => {
-
          plusSlides(-1);
          //  добавление/удаление классов для перехода слайдов
          sliders[slideIndex - 1].classList.remove('slideInLeft');
          sliders[slideIndex - 1].classList.add('slideInRight');
       });
       nextBtn.addEventListener('click', () => {
-
          plusSlides(1);
          //  добавление/удаление классов для перехода слайдов
          sliders[slideIndex - 1].classList.remove('slideInRight');
@@ -55,29 +52,26 @@ export const slider = ({ slides, dir, prev, next }) => {
       if (dir === 'vertical') {
          //   в интервале 3 сек меняем слайды
          paused = setInterval(function () {
-
             plusSlides(1);
             sliders[slideIndex - 1].classList.add('slideInDown');
-         }, 3000);
+         }, 5000);
       } else {
          //   или так-же меняем слайды но в горизонтальном положении
          paused = setInterval(function () {
-
             plusSlides(1);
             sliders[slideIndex - 1].classList.remove('slideInRight');
             sliders[slideIndex - 1].classList.add('slideInLeft');
-         }, 3000);
+         }, 5000);
       }
    }
+   
    activateAnimation();
    //    при наведении мыши на родителя слайда мы вызываем clearInterval с параметром
    sliders[0].parentNode.addEventListener('mouseenter', () => {
-
       clearInterval(paused);
    });
    //    если убираем курсор то запускаем функцию слайда
    sliders[0].parentNode.addEventListener('mouseleave', () => {
-       
       activateAnimation();
    });
 };
