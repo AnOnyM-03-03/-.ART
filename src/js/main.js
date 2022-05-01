@@ -1,7 +1,9 @@
-import { slider, modals } from './modules';
+
+import { slider, modals, mask, checkInputs } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
+
    const verticalSlide = {
       slides: '.main-slider-item',
       dir: 'vertical',
@@ -12,7 +14,11 @@ window.addEventListener('DOMContentLoaded', () => {
       prev: '.main-prev-btn',
       next: '.main-next-btn',
    };
+   
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
+   mask('[name="phone"]');
+   checkInputs('[name="name"]');
+   checkInputs('[name="message"]');
 });
