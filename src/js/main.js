@@ -1,4 +1,4 @@
-import { slider, modals, showMoreStyles } from './modules';
+import { slider, modals, showMoreStyles, form } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
@@ -19,4 +19,5 @@ window.addEventListener('DOMContentLoaded', () => {
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
+   form();
 });
