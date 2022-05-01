@@ -19,5 +19,4 @@ window.addEventListener('DOMContentLoaded', () => {
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
-   showMoreStyles(btnhowMoreStyles);
 });
