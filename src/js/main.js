@@ -1,4 +1,4 @@
-import { slider, modals } from './modules';
+import { slider, modals, showMoreStyles } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
@@ -12,7 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
       prev: '.main-prev-btn',
       next: '.main-next-btn',
    };
+   const btnhowMoreStyles = {
+      trigger: '.button-styles',
+      styles: '.styles-2',
+   };
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
+   showMoreStyles(btnhowMoreStyles);
 });
