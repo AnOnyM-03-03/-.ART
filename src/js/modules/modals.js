@@ -157,5 +157,5 @@ export const modals = () => {
    bindModals(consultationModalWindow);
    bindModals(giftModalWindow);
    openByScroll('.fixed-gift');
-   showModal('.popup-consultation', 6000);
+   showModal('.popup-consultation', 60000);
 };
