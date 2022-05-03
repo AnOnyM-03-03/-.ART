@@ -12,7 +12,7 @@ export const showMoreStyles = ({ trigger, wrapper }) => {
 
    function createCards(responce) {
       responce.forEach(({ src, link, title }) => {
-         let cards = document.createElement('div');
+         const cards = document.createElement('div');
          cards.classList.add(
             'animated',
             'fadeInUp',
