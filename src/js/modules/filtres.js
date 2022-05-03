@@ -35,27 +35,13 @@ export const filter = () => {
       }
    };
 
-   btnAll.addEventListener('click', () => {
-      typeFilter(markAll);
-   });
-   btnLovers.addEventListener('click', () => {
-      typeFilter(markLovers);
-   });
-   btnChef.addEventListener('click', () => {
-      typeFilter(markChef);
-   });
-   btnGirl.addEventListener('click', () => {
-      typeFilter(markGirl);
-   });
-   btnGuy.addEventListener('click', () => {
-      typeFilter(markGuy);
-   });
-   btnGrandmother.addEventListener('click', () => {
-      typeFilter();
-   });
-   btnGranddad.addEventListener('click', () => {
-      typeFilter();
-   });
+   btnAll.onclick = () => typeFilter(markAll);
+   btnLovers.onclick = () => typeFilter(markLovers);
+   btnChef.onclick = () => typeFilter(markChef);
+   btnGirl.onclick = () => typeFilter(markGirl);
+   btnGuy.onclick = () => typeFilter(markGuy);
+   btnGrandmother.onclick = () => typeFilter();
+   btnGranddad.onclick = () => typeFilter();
 
    menu.addEventListener('click', (e) => {
       const target = e.target;
