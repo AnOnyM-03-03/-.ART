@@ -14,7 +14,14 @@ window.addEventListener('DOMContentLoaded', () => {
    };
    const btnShowMoreStyles = {
       trigger: '.button-styles',
-      styles: '.styles-2',
+      wrapper: '#styles .row',
+   };
+   const materialsBlock = {
+      size: '#size',
+      material: '#material',
+      options: '#options',
+      promocode: '.promocode',
+      result: '.calc-price',
    };
    slider(verticalSlide);
    slider(horizontSlide);
