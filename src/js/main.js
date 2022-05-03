@@ -1,4 +1,4 @@
-import { slider, modals, showMoreStyles, form } from './modules';
+import { slider, modals, showMoreStyles, form, filter } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
@@ -21,4 +21,5 @@ window.addEventListener('DOMContentLoaded', () => {
    modals();
    form();
    showMoreStyles(btnShowMoreStyles);
+   filter();
 });
