@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
    };
    const btnShowMoreStyles = {
       trigger: '.button-styles',
-      styles: '.styles-2',
+      wrapper: '#styles .row',
    };
    const materialsBlock = {
       size: '#size',
