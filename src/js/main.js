@@ -1,5 +1,5 @@
-
 import { slider, modals, mask, checkInputs } from './modules';
+
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
       prev: '.main-prev-btn',
       next: '.main-next-btn',
    };
-   
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
