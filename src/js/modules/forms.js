@@ -1,4 +1,4 @@
-import { postData } from '../services/requestions'
+import { postData } from '../services/requestions';
 
 export const form = () => {
    const forms = document.querySelectorAll('form'),
@@ -50,12 +50,16 @@ export const form = () => {
    //    функция которая отвечает за отправку запроса
    // async - указывает что запрос асинхронный    await- говорит о том, что запрос нужно дождаться
    const postData = async (url, data) => {
-      const res = await fetch(url, {
-         method: 'POST',
-         body: data,
-      });
+      try {
+         const res = await fetch(url, {
+            method: 'POST',
+            body: data,
+         });
 
-      return await res.text();
+         return await res.text();
+      } catch (error) {
+         console.log('Error');
+      }
    };
    //    фунция для каждой формы
    forms.forEach((form) => {
