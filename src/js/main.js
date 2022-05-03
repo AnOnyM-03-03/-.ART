@@ -1,5 +1,13 @@
-import { slider, modals, mask, checkInputs } from './modules';
-
+import {
+   slider,
+   modals,
+   mask,
+   checkInputs,
+   showMoreStyles,
+   form,
+   calc,
+   filter,
+} from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
@@ -14,10 +22,25 @@ window.addEventListener('DOMContentLoaded', () => {
       prev: '.main-prev-btn',
       next: '.main-next-btn',
    };
+   const btnShowMoreStyles = {
+      trigger: '.button-styles',
+      wrapper: '#styles .row',
+   };
+   const materialsBlock = {
+      size: '#size',
+      material: '#material',
+      options: '#options',
+      promocode: '.promocode',
+      result: '.calc-price',
+   };
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
+   form();
    mask('[name="phone"]');
    checkInputs('[name="name"]');
    checkInputs('[name="message"]');
+   showMoreStyles(btnShowMoreStyles);
+   calc(materialsBlock);
+   filter();
 });
