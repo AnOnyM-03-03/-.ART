@@ -1,4 +1,4 @@
-import { slider, modals, showMoreStyles, form } from './modules';
+import { slider, modals, showMoreStyles, form, calc } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
    'use strict';
@@ -16,9 +16,17 @@ window.addEventListener('DOMContentLoaded', () => {
       trigger: '.button-styles',
       styles: '.styles-2',
    };
+   const materialsBlock = {
+      size: '#size',
+      material: '#material',
+      options: '#options',
+      promocode: '.promocode',
+      result: '.calc-price',
+   };
    slider(verticalSlide);
    slider(horizontSlide);
    modals();
    form();
    showMoreStyles(btnShowMoreStyles);
+   calc(materialsBlock);
 });
