@@ -7,6 +7,7 @@ import {
    form,
    calc,
    filter,
+   accordion,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -43,4 +44,5 @@ window.addEventListener('DOMContentLoaded', () => {
    showMoreStyles(btnShowMoreStyles);
    calc(materialsBlock);
    filter();
+   accordion('.accordion-heading');
 });

@@ -6,3 +6,4 @@ export { calc } from './calc';
 export { showMoreStyles } from './showMoreStyles';
 export { form } from './forms';
 export { filter } from './filtres';
+export { accordion } from './accordion';
