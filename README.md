@@ -1,1 +1,1 @@
-in this thread, I add a mask for the phone and also add a condition for entering only Cyrillic and numbers into the input
+в данной ветке реализовал событие для перетаскивания картинок в поле для заказа
