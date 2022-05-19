@@ -8,6 +8,7 @@ import {
    calc,
    filter,
    scroll,
+   drop,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -45,4 +46,5 @@ window.addEventListener('DOMContentLoaded', () => {
    calc(materialsBlock);
    filter();
    scroll('.pageup');
+   drop();
 });
