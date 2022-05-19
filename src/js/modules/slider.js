@@ -44,7 +44,6 @@ export const slider = ({ slides, dir, prev, next }) => {
          sliders[slideIndex - 1].classList.add('slideInLeft');
       });
    } catch (e) {
-      console.log('Error');
    }
 
    function activateAnimation() {
@@ -64,7 +63,7 @@ export const slider = ({ slides, dir, prev, next }) => {
          }, 5000);
       }
    }
-   
+
    activateAnimation();
    //    при наведении мыши на родителя слайда мы вызываем clearInterval с параметром
    sliders[0].parentNode.addEventListener('mouseenter', () => {
