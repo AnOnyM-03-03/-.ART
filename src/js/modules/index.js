@@ -7,3 +7,6 @@ export { showMoreStyles } from './showMoreStyles';
 export { form } from './forms';
 export { filter } from './filtres';
 export { pictureSize } from './pictureSize';
+export { burger } from './burger';
+export { scroll } from './scroll';
+export { drop } from './drop';

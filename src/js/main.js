@@ -8,6 +8,9 @@ import {
    calc,
    filter,
    pictureSize,
+   burger,
+   scroll,
+   drop,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -45,4 +48,8 @@ window.addEventListener('DOMContentLoaded', () => {
    calc(materialsBlock);
    filter();
    pictureSize('.sizes-block');
+   burger('.burger-menu', '.burger');
+}); 
+   scroll('.pageup');
+   drop();
 });
