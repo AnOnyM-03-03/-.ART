@@ -6,5 +6,6 @@ export { calc } from './calc';
 export { showMoreStyles } from './showMoreStyles';
 export { form } from './forms';
 export { filter } from './filtres';
+export { burger } from './burger';
 export { scroll } from './scroll';
 export { drop } from './drop';

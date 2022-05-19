@@ -1,1 +1,1 @@
-in this thread, I implemented the display of a button for lifting up to the head, as well as a planned scroll
+in this thread, I implemented showing the burger menu when the screen is less than 993 and hiding it when the screen is more than 992

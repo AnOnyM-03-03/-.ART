@@ -7,6 +7,7 @@ import {
    form,
    calc,
    filter,
+   burger,
    scroll,
    drop,
 } from './modules';
@@ -45,6 +46,8 @@ window.addEventListener('DOMContentLoaded', () => {
    showMoreStyles(btnShowMoreStyles);
    calc(materialsBlock);
    filter();
+   burger('.burger-menu', '.burger');
+}); 
    scroll('.pageup');
    drop();
 });
