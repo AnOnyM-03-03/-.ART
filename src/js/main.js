@@ -7,6 +7,7 @@ import {
    form,
    calc,
    filter,
+   scroll,
    drop,
 } from './modules';
 
@@ -44,5 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
    showMoreStyles(btnShowMoreStyles);
    calc(materialsBlock);
    filter();
+   scroll('.pageup');
    drop();
 });
