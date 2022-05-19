@@ -51,7 +51,6 @@ window.addEventListener('DOMContentLoaded', () => {
    accordion('.accordion-heading');
    pictureSize('.sizes-block');
    burger('.burger-menu', '.burger');
-}); 
    scroll('.pageup');
    drop();
 });
