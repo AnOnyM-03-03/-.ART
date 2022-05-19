@@ -7,6 +7,7 @@ import {
    form,
    calc,
    filter,
+   accordion,
    pictureSize,
    burger,
    scroll,
@@ -47,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
    showMoreStyles(btnShowMoreStyles);
    calc(materialsBlock);
    filter();
+   accordion('.accordion-heading');
    pictureSize('.sizes-block');
    burger('.burger-menu', '.burger');
 }); 
