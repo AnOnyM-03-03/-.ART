@@ -22,7 +22,7 @@ export const drop = () => {
       if (elem.closest('.calc_form')) {
          elem.closest('.file_upload').style.backgroundColor = '#fff';
       } else {
-         elem.closest('.file_upload').style.backgroundColor = '#f7e7e6';
+         elem.closest('.file_upload').style.backgroundColor = '#ededed';
       }
    }
 
