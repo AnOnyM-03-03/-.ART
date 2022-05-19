@@ -8,6 +8,8 @@ import {
    calc,
    filter,
    burger,
+   scroll,
+   drop,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -46,3 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
    filter();
    burger('.burger-menu', '.burger');
 }); 
+   scroll('.pageup');
+   drop();
+});
