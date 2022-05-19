@@ -7,6 +7,7 @@ import {
    form,
    calc,
    filter,
+   pictureSize,
    burger,
    scroll,
    drop,
@@ -46,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
    showMoreStyles(btnShowMoreStyles);
    calc(materialsBlock);
    filter();
+   pictureSize('.sizes-block');
    burger('.burger-menu', '.burger');
 }); 
    scroll('.pageup');
