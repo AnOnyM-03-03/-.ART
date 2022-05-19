@@ -8,6 +8,10 @@ import {
    calc,
    filter,
    accordion,
+   pictureSize,
+   burger,
+   scroll,
+   drop,
 } from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -45,4 +49,9 @@ window.addEventListener('DOMContentLoaded', () => {
    calc(materialsBlock);
    filter();
    accordion('.accordion-heading');
+   pictureSize('.sizes-block');
+   burger('.burger-menu', '.burger');
+}); 
+   scroll('.pageup');
+   drop();
 });
